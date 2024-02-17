@@ -1,12 +1,14 @@
 {
   "FolderOrderSettings": [
+    {"name":"Extensions","order":2,"path":"folders/Extensions.yy",},
     {"name":"Sprites","order":3,"path":"folders/STANNcam/Miscellaneous/Sprites.yy",},
     {"name":"Zones","order":5,"path":"folders/STANNcam/Zones.yy",},
-    {"name":"Extensions","order":2,"path":"folders/Extensions.yy",},
+    {"name":"Unit Tests","order":3,"path":"folders/Unit Tests.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_stanncam_zone_corner","order":3,"path":"objects/obj_stanncam_zone_corner/obj_stanncam_zone_corner.yy",},
     {"name":"BaseTestClass","order":2,"path":"scripts/BaseTestClass/BaseTestClass.yy",},
+    {"name":"scr_test_stanncam","order":1,"path":"scripts/scr_test_stanncam/scr_test_stanncam.yy",},
     {"name":"TestCase","order":10,"path":"scripts/TestCase/TestCase.yy",},
     {"name":"spr_stanncam_zone_2side","order":2,"path":"sprites/spr_stanncam_zone_2side/spr_stanncam_zone_2side.yy",},
     {"name":"__crispyStructUnpack","order":1,"path":"scripts/__crispyStructUnpack/__crispyStructUnpack.yy",},
