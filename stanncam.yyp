@@ -101,6 +101,7 @@
     {"id":{"name":"crispyIsInternalVariable","path":"scripts/crispyIsInternalVariable/crispyIsInternalVariable.yy",},},
     {"id":{"name":"obj_stanncam_zone_2side","path":"objects/obj_stanncam_zone_2side/obj_stanncam_zone_2side.yy",},},
     {"id":{"name":"spr_ball","path":"sprites/spr_ball/spr_ball.yy",},},
+    {"id":{"name":"obj_dummy_object","path":"objects/obj_dummy_object/obj_dummy_object.yy",},},
     {"id":{"name":"stanncam_shake","path":"scripts/stanncam_shake/stanncam_shake.yy",},},
     {"id":{"name":"obj_camera_pixel_grid","path":"objects/obj_camera_pixel_grid/obj_camera_pixel_grid.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},

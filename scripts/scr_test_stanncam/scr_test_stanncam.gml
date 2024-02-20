@@ -71,3 +71,33 @@ function test_stanncam_newStanncam_camIdShouldBe0() {
     var _ = parent.cam;
     assertEqual(_.cam_id, 0);
 }
+
+/// @ignore
+function test_stanncam_moveWith0DurationWhileFollowingObject_shouldBeAtThePreviousPosition() {
+    var _ = parent.cam;
+    var _dummy = instance_create_layer(0, 0, "Instances", obj_dummy_object);
+    _.move(_dummy.x, _dummy.y);
+    var _x_previous = _.x;
+    var _y_previous = _.y;
+    _.follow = _dummy;
+    _.move(1000, 1000);
+    _.__step();
+    assertEqual(_.x, _x_previous);
+    assertEqual(_.y, _y_previous);
+    instance_destroy(_dummy);
+}
+
+/// @ignore
+function test_stanncam_moveWith1DurationWhileFollowingObject_shouldBeAtThePreviousPosition() {
+    var _ = parent.cam;
+    var _dummy = instance_create_layer(0, 0, "Instances", obj_dummy_object);
+    _.move(_dummy.x, _dummy.y);
+    var _x_previous = _.x;
+    var _y_previous = _.y;
+    _.follow = _dummy;
+    _.move(1000, 1000, 1);
+    _.__step();
+    assertEqual(_.x, _x_previous);
+    assertEqual(_.y, _y_previous);
+    instance_destroy(_dummy);
+}
