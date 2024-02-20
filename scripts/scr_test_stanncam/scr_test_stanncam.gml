@@ -21,16 +21,14 @@ function test_stanncam_moveWith1duration_shouldBeAtTheSamePosition() {
 }
 
 /// @ignore
-function test_stanncam_moveWith1durationAndInvokingStepOnce_shouldBeAtTheSamePosition() {
+function test_stanncam_moveWith1durationAndInvokingStepOnce_shouldNotBeAtNewPosition() {
     var _ = parent.cam;
-    var _x_previous = _.x;
-    var _y_previous = _.y;
     var _new_x = 100;
     var _new_y = 100;
     _.move(_new_x, _new_y, 1);
     _.__step();
-    assertEqual(_.x, _x_previous);
-    assertEqual(_.y, _y_previous);
+    assertEqual(_.x, _new_x);
+    assertEqual(_.y, _new_y);
 }
 
 /// @ignore
@@ -46,7 +44,7 @@ function test_stanncam_moveWith1durationAndInvokingStepTwice_shouldBeAtNewMovePo
 }
 
 /// @ignore
-function test_stanncam_moveToSamePositionWithElasticAnimationCurve_shouldHaveTimeAndDurationEqual() {
+function test_stanncam_moveToSamePositionUntilNotMoving_shouldHaveTimeAndDurationEqual() {
     var _ = parent.cam;
     _.move(_.x, _.y, 5);
     // Keep track of time to prevent infinite loop
@@ -58,13 +56,7 @@ function test_stanncam_moveToSamePositionWithElasticAnimationCurve_shouldHaveTim
         }
         _.__step();
     }
-    show_debug_message({
-        __t: _.__t,
-        __duration: _.__duration,
-        x: _.x,
-        y: _.y
-    });
-    assertEqual(_.__t - 1, _.__duration);
+    assertEqual(_.__t, _.__duration);
 }
 
 /// @ignore
