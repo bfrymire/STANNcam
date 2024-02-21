@@ -101,3 +101,30 @@ function test_stanncam_move_with_1_duration_while_following_object_should_be_at_
     assertEqual(_.y, _y_previous);
     instance_destroy(_dummy);
 }
+
+/// @ignore
+function test_stanncam_set_paused_to_true_should_be_true() {
+    var _ = parent.cam;
+    _.set_paused(true);
+    assertTrue(_.paused);
+}
+
+/// @ignore
+function test_stanncam_set_paused_to_false_should_be_false() {
+    var _ = parent.cam;
+    _.set_paused(false);
+    assertFalse(_.paused);
+}
+
+/// @ignore
+function test_stanncam_get_paused_on_new_stanncam_should_be_true() {
+    var _ = parent.cam;
+    assertFalse(_.get_paused());
+}
+
+/// @ignore
+function test_stanncam_toggle_paused_on_new_stanncam_should_be_true() {
+    var _ = parent.cam;
+    _.toggle_paused();
+    assertTrue(_.paused);
+}
