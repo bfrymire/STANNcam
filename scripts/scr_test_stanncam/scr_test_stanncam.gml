@@ -1,5 +1,5 @@
 /// @ignore
-function test_stanncam_move_with_0_duration_should_be_at_new_move_position() {
+function test_stanncam_moveWith0Duration_shouldBeAtNewMovePosition() {
     var _ = parent.cam;
     var _new_x = 100;
     var _new_y = 100;
@@ -9,7 +9,7 @@ function test_stanncam_move_with_0_duration_should_be_at_new_move_position() {
 }
 
 /// @ignore
-function test_stanncam_move_with_1_duration_should_be_at_the_same_position() {
+function test_stanncam_moveWith1Duration_shouldBeAtTheSamePosition() {
     var _ = parent.cam;
     var _x_previous = _.x;
     var _y_previous = _.y;
@@ -21,7 +21,7 @@ function test_stanncam_move_with_1_duration_should_be_at_the_same_position() {
 }
 
 /// @ignore
-function test_stanncam_move_with_1_duration_and_invoking_step_once_should_not_be_at_new_position() {
+function test_stanncam_moveWith1DurationAndInvokingStepOnce_shouldNotBeAtNewPosition() {
     var _ = parent.cam;
     var _new_x = 100;
     var _new_y = 100;
@@ -32,7 +32,7 @@ function test_stanncam_move_with_1_duration_and_invoking_step_once_should_not_be
 }
 
 /// @ignore
-function test_stanncam_move_with_1_duration_and_invoking_step_twice_should_be_at_new_move_position() {
+function test_stanncam_moveWith1DurationAndInvokingStepTwice_shouldBeAtNewMovePosition() {
     var _ = parent.cam;
     var _new_x = 100;
     var _new_y = 100;
@@ -44,7 +44,7 @@ function test_stanncam_move_with_1_duration_and_invoking_step_twice_should_be_at
 }
 
 /// @ignore
-function test_stanncam_move_to_same_position_until_not_moving_should_have_time_and_duration_equal() {
+function test_stanncam_moveToSamePositionUntilNotMoving_shouldHaveTimeAndDurationEqual() {
     var _ = parent.cam;
     _.move(_.x, _.y, 5);
     // Keep track of time to prevent infinite loop
@@ -60,20 +60,20 @@ function test_stanncam_move_to_same_position_until_not_moving_should_have_time_a
 }
 
 /// @ignore
-function test_stanncam_creating_second_stanncam_cam_id_should_be_1() {
+function test_stanncam_creatingSecondStanncam_shouldHavecamIdBe1() {
     var _ = new stanncam();
     assertEqual(_.cam_id, 1);
     _.destroy();
 }
 
 /// @ignore
-function test_stanncam_new_stanncam_cam_id_should_be_0() {
+function test_stanncam_newStanncam_shouldHaveCamIdBe0() {
     var _ = parent.cam;
     assertEqual(_.cam_id, 0);
 }
 
 /// @ignore
-function test_stanncam_move_with_0_duration_while_following_object_should_be_at_previous_position() {
+function test_stanncam_moveWith0DurationWhileFollowingObject_shouldBeAtPreviousPosition() {
     var _ = parent.cam;
     var _dummy = instance_create_layer(0, 0, "Instances", obj_dummy_object);
     _.move(_dummy.x, _dummy.y);
@@ -88,7 +88,7 @@ function test_stanncam_move_with_0_duration_while_following_object_should_be_at_
 }
 
 /// @ignore
-function test_stanncam_move_with_1_duration_while_following_object_should_be_at_previous_position() {
+function test_stanncam_moveWith1DurationWhileFollowingObject_shouldBeAtPreviousPosition() {
     var _ = parent.cam;
     var _dummy = instance_create_layer(0, 0, "Instances", obj_dummy_object);
     _.move(_dummy.x, _dummy.y);
@@ -103,27 +103,27 @@ function test_stanncam_move_with_1_duration_while_following_object_should_be_at_
 }
 
 /// @ignore
-function test_stanncam_set_paused_to_true_should_be_true() {
+function test_stanncam_setPausedToTrue_shouldBeTrue() {
     var _ = parent.cam;
     _.set_paused(true);
     assertTrue(_.paused);
 }
 
 /// @ignore
-function test_stanncam_set_paused_to_false_should_be_false() {
+function test_stanncam_setPausedToFalse_shouldBeFalse() {
     var _ = parent.cam;
     _.set_paused(false);
     assertFalse(_.paused);
 }
 
 /// @ignore
-function test_stanncam_get_paused_on_new_stanncam_should_be_true() {
+function test_stanncam_getPausedOnNewStanncam_shouldBeFalse() {
     var _ = parent.cam;
     assertFalse(_.get_paused());
 }
 
 /// @ignore
-function test_stanncam_toggle_paused_on_new_stanncam_should_be_true() {
+function test_stanncam_togglePausedOnNewStanncam_shouldBeTrue() {
     var _ = parent.cam;
     _.toggle_paused();
     assertTrue(_.paused);
