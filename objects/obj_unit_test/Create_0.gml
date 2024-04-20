@@ -13,5 +13,6 @@ _s.onRunEnd(function() {
 });
 runner.addTestSuite(_s);
 runner.discover(_s, "test_stanncam_");
+runner.discover(_s, "test_stanncamUpdateViewSize_");
 
 runner.run();
