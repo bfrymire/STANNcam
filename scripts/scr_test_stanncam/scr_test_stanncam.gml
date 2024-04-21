@@ -64,7 +64,7 @@ function test_stanncam_moveToSamePositionUntilNotMoving_shouldHaveTimeAndDuratio
 /// @ignore
 function test_stanncam_moveWith0DurationWhileFollowingObject_shouldBeAtPreviousPosition() {
     var _ = parent.cam;
-    var _dummy = instance_create_layer(0, 0, "Instances", obj_dummy_object);
+    var _dummy = parent.dummy;
     _.move(_dummy.x, _dummy.y);
     var _x_previous = _.x;
     var _y_previous = _.y;
@@ -73,13 +73,12 @@ function test_stanncam_moveWith0DurationWhileFollowingObject_shouldBeAtPreviousP
     _.__step();
     assertEqual(_.x, _x_previous);
     assertEqual(_.y, _y_previous);
-    instance_destroy(_dummy);
 }
 
 /// @ignore
 function test_stanncam_moveWith1DurationWhileFollowingObject_shouldBeAtPreviousPosition() {
     var _ = parent.cam;
-    var _dummy = instance_create_layer(0, 0, "Instances", obj_dummy_object);
+    var _dummy = parent.dummy;
     _.move(_dummy.x, _dummy.y);
     var _x_previous = _.x;
     var _y_previous = _.y;
@@ -88,7 +87,6 @@ function test_stanncam_moveWith1DurationWhileFollowingObject_shouldBeAtPreviousP
     _.__step();
     assertEqual(_.x, _x_previous);
     assertEqual(_.y, _y_previous);
-    instance_destroy(_dummy);
 }
 
 #endregion
@@ -197,6 +195,24 @@ function test_stanncamUpdateViewSize_updateWidthAndHeightToHalf_shouldUpdateSurf
     _.__update_view_size();
     assertEqual(_.zoom_x, _.width * _zoom_amount * 0.5 * -1);
     assertEqual(_.zoom_y, _.height * _zoom_amount * 0.5 * -1);
+}
+
+#endregion
+#region Test stanncam zoom
+
+/// @ignore
+function test_stanncamZoom_whenZoomingOnInstance_shouldUpdateXAndYPositionsToInstance() {
+    var _ = parent.cam;
+    var _dummy = parent.dummy;
+    _.bounds_w = 0;
+    _.bounds_h = 0;
+    _.follow = _dummy;
+    _.zoom(0.25);
+    repeat (1000) {
+        _.__step();
+    }
+    assertEqual(_.x, _dummy.x);
+    assertEqual(_.y, _dummy.y);
 }
 
 #endregion
