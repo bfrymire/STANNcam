@@ -52,10 +52,11 @@ function test_stanncam_moveToSamePositionUntilNotMoving_shouldHaveTimeAndDuratio
     var _ = parent.cam;
     _.move(_.x, _.y, 5);
     // Keep track of time to prevent infinite loop
-    var _start = get_timer();
-    var _end = _start + 10_000_000;
-    while(get_timer() < _end) {
+    var _start = current_time;
+    var _end = _start + 10_000;
+    while (current_time < _end) {
         if !_.__moving {
+            show_debug_message($"Stopped moving in {current_time - _start}ms");
             break;
         }
         _.__step();
@@ -95,20 +96,26 @@ function test_stanncam_moveWith1DurationWhileFollowingObject_shouldBeAtPreviousP
 #region Test stanncam cam_id
 
 /// @ignore
-function test_stanncam_creatingSecondStanncam_shouldHavecamIdBe1() {
+function test_stanncam_creatingSecondStanncamCamId_shouldBe1() {
     var _ = new stanncam();
     assertEqual(_.cam_id, 1);
     _.destroy();
 }
 
 /// @ignore
-function test_stanncam_newStanncam_shouldHaveCamIdBe0() {
+function test_stanncam_newStanncamCamId_shouldBe0() {
     var _ = parent.cam;
     assertEqual(_.cam_id, 0);
 }
 
 #endregion
 #region Test stanncam pause
+
+/// @ignore
+function test_stanncam_getPausedOnNewStanncam_shouldBeFalse() {
+    var _ = parent.cam;
+    assertFalse(_.get_paused());
+}
 
 /// @ignore
 function test_stanncam_setPausedToTrue_shouldBeTrue() {
@@ -122,12 +129,6 @@ function test_stanncam_setPausedToFalse_shouldBeFalse() {
     var _ = parent.cam;
     _.set_paused(false);
     assertFalse(_.paused);
-}
-
-/// @ignore
-function test_stanncam_getPausedOnNewStanncam_shouldBeFalse() {
-    var _ = parent.cam;
-    assertFalse(_.get_paused());
 }
 
 /// @ignore
@@ -210,7 +211,7 @@ function test_stanncamZoom_whenZoomingOnInstance_shouldUpdateXAndYPositionsToIns
     _.bounds_h = 0;
     _.follow = _dummy;
     _.zoom(0.25);
-    repeat (1000) {
+    repeat (100) {
         _.__step();
     }
     assertEqual(_.x, _dummy.x);
