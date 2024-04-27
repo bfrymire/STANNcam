@@ -14,6 +14,7 @@ _s.onRunEnd(function() {
     instance_destroy(dummy);
 });
 runner.addTestSuite(_s);
+runner.discover(_s, "test_stanncam_constructor_");
 runner.discover(_s, "test_stanncam_");
 runner.discover(_s, "test_stanncamUpdateViewSize_");
 runner.discover(_s, "test_stanncamZoom_");

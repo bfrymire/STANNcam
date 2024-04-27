@@ -1,5 +1,55 @@
 // Feather disable all
 
+#region Test stanncam constructor
+
+function test_stanncam_constructor_checkDefaultValues() {
+    var _ = new stanncam();
+    assertEqual(_.x, 0);
+    assertEqual(_.y, 0);
+    assertEqual(_.width, global.game_w);
+    assertEqual(_.height, global.game_h);
+    assertFalse(_.surface_extra_on);
+    assertTrue(_.smooth_draw);
+}
+
+function test_stanncam_constructor_createStanncamWithSpecifiedValues() {
+    var _x = 100;
+    var _y = 100;
+    var _width = 800;
+    var _height = 600;
+    var _surface_extra_on = true;
+    var _smooth_draw = false;
+    var _ = new stanncam(_x, _y, _width, _height, _surface_extra_on, _smooth_draw);
+    assertEqual(_.x, _x);
+    assertEqual(_.y, _y);
+    assertEqual(_.width, _width);
+    assertEqual(_.height, _height);
+    assertTrue(_.surface_extra_on);
+    assertFalse(_.smooth_draw);
+}
+
+function test_stanncam_creatingMoreThan8Stanncams_shouldThrowAnError() {
+    assertRaises(function() {
+        repeat (8) {
+            new stanncam();
+        }
+    });
+}
+
+function test_stanncam_creatingMoreThan8Stanncams_shouldThrowAnErrorMessage() {
+    assertRaiseErrorValue(function() {
+        repeat (8) {
+            new stanncam();
+        }
+    }, "There can only be a maximum of 8 cameras.");
+}
+
+function test_stanncam_toString_shouldReturnAString() {
+    var _ = parent.cam;
+    assertEqual(typeof(_.toString()), "string");
+}
+
+#endregion
 #region Test stanncam move
 
 /// @ignore
@@ -56,10 +106,12 @@ function test_stanncam_moveToSamePositionUntilNotMoving_shouldHaveTimeAndDuratio
     var _end = _start + 10_000;
     while (current_time < _end) {
         if !_.__moving {
-            show_debug_message($"Stopped moving in {current_time - _start}ms");
             break;
         }
         _.__step();
+    }
+    if current_time >= _end {
+        show_debug_message($"TestCase timed out in {current_time - _start}ms");
     }
     assertEqual(_.__t, _.__duration);
 }
