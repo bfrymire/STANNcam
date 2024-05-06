@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "BaseTestClass",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Crispy",
-    "path": "folders/Extensions/Crispy.yy",
+  "$GMScript":"",
+  "%Name":"BaseTestClass",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BaseTestClass",
+  "parent":{
+    "name":"Crispy",
+    "path":"folders/Extensions/Crispy.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

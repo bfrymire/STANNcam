@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__crispyStructUnpack",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Crispy",
-    "path": "folders/Extensions/Crispy.yy",
+  "$GMScript":"",
+  "%Name":"__crispyStructUnpack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__crispyStructUnpack",
+  "parent":{
+    "name":"Crispy",
+    "path":"folders/Extensions/Crispy.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__crispy_config_macros",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Crispy",
-    "path": "folders/Extensions/Crispy.yy",
+  "$GMScript":"",
+  "%Name":"__crispy_config_macros",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__crispy_config_macros",
+  "parent":{
+    "name":"Crispy",
+    "path":"folders/Extensions/Crispy.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
