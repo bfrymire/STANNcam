@@ -202,9 +202,19 @@ function test_stanncamUpdateViewSize_invokeUpdateViewSize_shouldCreateSurface() 
 }
 
 /// @ignore
-function test_stanncamUpdateViewSize_invokeUpdateViewSize_shouldCreateSurfaceUsingWidthAndHeight() {
+function test_stanncamUpdateViewSize_invokeUpdateViewSizeWithSmoothDraw_shouldCreateSurfaceUsingWidthAndHeightPlus1Pixel() {
     var _ = parent.cam;
     _.use_app_surface = false;
+    _.__update_view_size();
+    assertEqual(_.width + 1, surface_get_width(_.surface));
+    assertEqual(_.height + 1, surface_get_height(_.surface));
+}
+
+/// @ignore
+function test_stanncamUpdateViewSize_invokeUpdateViewSizeWithoutSmoothDraw_shouldCreateSurfaceUsingWidthAndHeight() {
+    var _ = parent.cam;
+    _.use_app_surface = false;
+    _.smooth_draw = false;
     _.__update_view_size();
     assertEqual(_.width, surface_get_width(_.surface));
     assertEqual(_.height, surface_get_height(_.surface));
@@ -262,8 +272,9 @@ function test_stanncamZoom_whenZoomingOnInstance_shouldUpdateXAndYPositionsToIns
     _.bounds_w = 0;
     _.bounds_h = 0;
     _.follow = _dummy;
+    _.room_constrain = false;
     _.zoom(0.25);
-    repeat (100) {
+    repeat (1000) {
         _.__step();
     }
     assertEqual(_.x, _dummy.x);
