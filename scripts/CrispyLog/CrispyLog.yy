@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CrispyLog",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CrispyLog",
+  "parent":{
+    "name":"Crispy",
+    "path":"folders/Unit Tests/Crispy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"crispyMixinStructUnpack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"crispyMixinStructUnpack",
+  "parent":{
+    "name":"Crispy",
+    "path":"folders/Unit Tests/Crispy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

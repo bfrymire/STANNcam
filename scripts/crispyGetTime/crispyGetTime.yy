@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"crispyGetTime",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"crispyGetTime",
+  "parent":{
+    "name":"Crispy",
+    "path":"folders/Unit Tests/Crispy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

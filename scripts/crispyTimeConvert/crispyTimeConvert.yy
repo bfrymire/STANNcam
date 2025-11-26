@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"crispyTimeConvert",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"crispyTimeConvert",
+  "parent":{
+    "name":"Crispy",
+    "path":"folders/Unit Tests/Crispy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__crispy_config_macros",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__crispy_config_macros",
+  "parent":{
+    "name":"Crispy",
+    "path":"folders/Unit Tests/Crispy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

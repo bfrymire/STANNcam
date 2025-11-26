@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BaseTestClass",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BaseTestClass",
+  "parent":{
+    "name":"Crispy",
+    "path":"folders/Unit Tests/Crispy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
