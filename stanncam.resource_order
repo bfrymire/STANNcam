@@ -1,14 +1,18 @@
 {
   "FolderOrderSettings":[
-    {"name":"Unit Tests","order":2,"path":"folders/Unit Tests.yy",},
     {"name":"Sprites","order":3,"path":"folders/STANNcam/Miscellaneous/Sprites.yy",},
     {"name":"Zones","order":5,"path":"folders/STANNcam/Zones.yy",},
+    {"name":"Unit Tests","order":2,"path":"folders/Unit Tests.yy",},
+    {"name":"Tests","order":4,"path":"folders/Unit Tests/Tests.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_dummy_object","order":1,"path":"objects/obj_dummy_object/obj_dummy_object.yy",},
     {"name":"obj_stanncam_zone_1side","order":1,"path":"objects/obj_stanncam_zone_1side/obj_stanncam_zone_1side.yy",},
     {"name":"obj_stanncam_zone_2side","order":2,"path":"objects/obj_stanncam_zone_2side/obj_stanncam_zone_2side.yy",},
     {"name":"obj_stanncam_zone_corner","order":3,"path":"objects/obj_stanncam_zone_corner/obj_stanncam_zone_corner.yy",},
     {"name":"obj_stanncam_zone_u","order":4,"path":"objects/obj_stanncam_zone_u/obj_stanncam_zone_u.yy",},
+    {"name":"obj_unit_test","order":2,"path":"objects/obj_unit_test/obj_unit_test.yy",},
+    {"name":"rm_unit_test","order":6,"path":"rooms/rm_unit_test/rm_unit_test.yy",},
     {"name":"__crispyStructUnpack","order":1,"path":"scripts/__crispyStructUnpack/__crispyStructUnpack.yy",},
     {"name":"BaseTestClass","order":2,"path":"scripts/BaseTestClass/BaseTestClass.yy",},
     {"name":"crispyDebugMessage","order":3,"path":"scripts/crispyDebugMessage/crispyDebugMessage.yy",},
@@ -18,6 +22,8 @@
     {"name":"CrispyLog","order":7,"path":"scripts/CrispyLog/CrispyLog.yy",},
     {"name":"crispyMixinStructUnpack","order":8,"path":"scripts/crispyMixinStructUnpack/crispyMixinStructUnpack.yy",},
     {"name":"crispyTimeConvert","order":9,"path":"scripts/crispyTimeConvert/crispyTimeConvert.yy",},
+    {"name":"scr_goto_test_room","order":3,"path":"scripts/scr_goto_test_room/scr_goto_test_room.yy",},
+    {"name":"scr_test_zones","order":1,"path":"scripts/scr_test_zones/scr_test_zones.yy",},
     {"name":"TestCase","order":10,"path":"scripts/TestCase/TestCase.yy",},
     {"name":"TestRunner","order":11,"path":"scripts/TestRunner/TestRunner.yy",},
     {"name":"TestSuite","order":12,"path":"scripts/TestSuite/TestSuite.yy",},
